@@ -1,0 +1,110 @@
+.select2-selection__rendered {
+    line-height: 31px !important;
+}
+.select2-container .select2-selection--single {
+    height: 38px !important;
+}
+.select2-selection__arrow {
+    height: 30px !important;
+}
+
+/* Image uploader CSS Properties */
+    /* .container .row .input-group .upload {
+        opacity: 0;
+    }
+    .container .row .input-group .upload-label {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+    } */
+.main-content
+    .section
+    .section-body
+    .row
+    .card-body
+    .row
+    .uploadimg
+    .input-group
+    .upload {
+    opacity: 0;
+}
+.main-content
+    .section
+    .section-body
+    .row
+    .card-body
+    .row
+    .uploadimg
+    .input-group
+    .upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+/* #upload {
+    opacity: 0;
+} */
+
+/* #upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+} */
+
+/* #upload1 {
+    opacity: 0;
+}
+
+#upload-label1 {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+} */
+
+.image-area {
+    border: 2px dashed rgba(37, 147, 238, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: "Image";
+    color: rgba(37, 147, 238);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+.bg-img {
+    /* The image used */
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/002/814/299/non_2x/geometric-shapes-of-dark-blue-colors-in-memphis-design-style-vector.jpg"); */
+    background-image: url(../img/login-1wallpaper-backgorund-normal.png);
+
+    /* Control the height of the image */
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#datatable_length .py-2 {
+    padding-bottom: 20px;
+}
