@@ -17,7 +17,9 @@ class MasterDataController extends Controller
         // dd($request->all());
         $password = Hash::make($request->password);
 
-        $request->file('uploadnpwp')->store('npwp');
+        if($request->uploadnpwp != null){
+            $request->file('uploadnpwp')->store('npwp');
+        } 
 
         User::create(['username' => $request->username, 'name' => $request->nama, 'nik' => $request->nik, 'password' => $password, 'privilage' => $request->privilage, 'stat'=>1]);
 
