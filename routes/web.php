@@ -34,6 +34,8 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/mdata', [MasterDataController::class, 'index'])->name('mdata');
+    Route::get('/mdatalist', [MasterDataController::class, 'list'])->name('mdatalist');
+    Route::get('/mdataedit/{memp}/edit', [MasterDataController::class, 'edit'])->name('mdataedit');
     Route::post('/postmasterdata', [MasterDataController::class, 'postMasterData'])->name('postmasterdata');
     Route::get('/accabsen', [AproveAbsensiController::class, 'index'])->name('accabsen');
     Route::post('/postaccabsen', [AproveAbsensiController::class, 'postAproveAbsensi'])->name('postaccabsen');

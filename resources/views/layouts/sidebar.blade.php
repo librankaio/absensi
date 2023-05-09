@@ -1,18 +1,28 @@
 <ul class="sidebar-menu">
+    @php
+        $role = session('privilage');   
+    @endphp
+    @if($role == 'SU')    
     <li class="menu-header">MASTER</li>
     <li class="nav-item dropdown">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-cubes"></i><span>Master Data</span></a>
         <ul class="dropdown-menu">
             <li><a class="nav-link" href="/mdata">Master Data User</a></li>            
+            <li><a class="nav-link" href="/mdatalist">Master Data User List</a></li>            
         </ul>
     </li>
+    @endif
     <li class="menu-header">Absensi</li>
     <li class="nav-item dropdown">
         <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-exchange-alt"></i>
             <span>Transaction</span></a>
         <ul class="dropdown-menu">
+            @if ($role == 'SU')
             <li><a class="nav-link" href="/accabsen">Acc Absen</a></li>
             <li><a class="nav-link" href="/absen">Absen</a></li>
+            @elseif ($role == 'USER')
+            <li><a class="nav-link" href="/absen">Absen</a></li>
+            @endif
         </ul>
     </li>
     <li class="menu-header">Reports</li>
@@ -23,7 +33,7 @@
             <li><a class="nav-link" href="">Laporan Penjualan</a></li>
             <li><a class="nav-link" href="">Laporan Pembelian</a></li>
         </ul>
-    </li>
+    </li>    
     {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
     <li class="nav-item dropdown">
         <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>

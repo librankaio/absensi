@@ -20,9 +20,11 @@ class LoginController extends Controller
             // Hash::request()->password;
             $name = Auth::User()->name;
             $nik = Auth::User()->nik;
+            $privilage = Auth::User()->privilage;
             // $comp_code = Auth::User()->comp_code;
             // $request->session()->put('comp_name', $comp_name);
             $request->session()->put('name', $name);
+            $request->session()->put('privilage', $privilage);
             $request->session()->put('nik', $nik);
             // dd(session()->all());
                         
